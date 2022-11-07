@@ -12,7 +12,6 @@
 - Connected mongodb database to store todo task
 - Add new todos in the database
 - Fetch the todos from the database
-- Update and edit the todos
-- Delete a specific task todo
-- And delete the done todos by clicking "Delte done todos"
-- 
+- Update a specific task todos
+- Delete a specific task todos
+- And delete all done todos by clicking "Delete done todos"
