@@ -13,6 +13,7 @@ const TODO_API_URL = "http://localhost:5000";
 export const addNewTodo = (data) => async (dispatch) => {
   try {
     const res = await axios.post(`${TODO_API_URL}/todos`, { data });
+    console.log(res);
 
     dispatch({ type: ADDNEW_TODO, payload: res.data });
   } catch (error) {
@@ -26,6 +27,7 @@ export const addNewTodo = (data) => async (dispatch) => {
 export const getAllTodos = () => async (dispatch) => {
   try {
     const res = await axios.get(`${TODO_API_URL}/todos`);
+    console.log(res);
 
     dispatch({ type: GETALL_TODO, payload: res.data });
   } catch (error) {
