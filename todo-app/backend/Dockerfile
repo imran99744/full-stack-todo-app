@@ -10,8 +10,4 @@ COPY . .
 
 EXPOSE 5000
 
-ENV MONGODB_USERNAME=infra-todo
-
-ENV MONGODB_PASSWORD=Infra2023
-
 CMD ["npm","start"]
