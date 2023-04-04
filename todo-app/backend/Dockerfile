@@ -10,4 +10,6 @@ COPY . .
 
 EXPOSE 5000
 
+ENV MONGO_URL=""
+
 CMD ["npm","start"]
