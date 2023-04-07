@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FROM node:17.9.0-slim
 
 WORKDIR /app
@@ -13,3 +14,11 @@ EXPOSE 5000
 ENV MONGO_URL=""
 
 CMD ["npm","start"]
+=======
+FROM node:16
+WORKDIR /app
+COPY ./package*.json ./
+RUN npm install
+COPY . .
+CMD ["npm", "start"]
+>>>>>>> 29b3d93 (docker-compose file added)
