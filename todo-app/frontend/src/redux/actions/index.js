@@ -8,7 +8,7 @@ import {
   TOGGLE_TAB,
 } from "./type";
 
-const TODO_API_URL = "http://localhost:5000";
+const TODO_API_URL = "http://backend-container:5000";
 
 export const addNewTodo = (data) => async (dispatch) => {
   try {

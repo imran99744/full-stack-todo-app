@@ -44,5 +44,6 @@
   "devDependencies": {
     "@testing-library/react": "^13.4.0",
     "react-test-renderer": "^18.2.0"
-  }
+  },
+  "proxy": "http://backend-container:5000"
 }

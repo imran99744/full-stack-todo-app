@@ -27,6 +27,9 @@ services:
       - ./backend:/app
     depends_on:
       - mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: secret
   mongo:
     image: mongo
     ports:
@@ -38,9 +41,10 @@ services:
       - mongoData:/data/db
     
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=infra-todo
-      - MONGO_INITDB_ROOT_PASSWORD=Infra2023
-      - MONGO_INITDB_DATABASE=todo_db
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: secret
+      MONGO_INITDB_DATABASE: todov1-db
+      MONGO_URL: mongodb://mongo-container:27017/todov1-db
 networks:
   mern-stack-network:
 volumes:
